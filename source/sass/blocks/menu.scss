@@ -13,6 +13,12 @@
   &:not(:last-child) {
     margin-right: 33px;
   }
+
+  @include vp-767 {
+    &:not(:last-child) {
+      margin-right: 23px;
+    }
+  }
 }
 
 .menu__item a {
@@ -24,5 +30,10 @@
   &:focus,
   &:active {
     color: darken($color-alice-blue, 30%);
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 17px;
   }
 }

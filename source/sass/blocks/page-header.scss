@@ -10,8 +10,15 @@
 }
 
 .page-header__link-logo {
-  img {
-    width: 70px;
-    height: 38px;
+    align-self: center;
+}
+
+.page-header__link-logo img {
+  width: 70px;
+  height: 38px;
+
+  @include vp-767 {
+    width: 38px;
+    height: 20px;
   }
 }
