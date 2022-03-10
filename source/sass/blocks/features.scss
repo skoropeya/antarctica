@@ -1,0 +1,28 @@
+.features {
+  background-color: $color-pattens-blue;
+
+  h2 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    margin: 0;
+  }
+}
+
+.features__list {
+  margin: 0;
+}
+
+.features__box {
+  background-color: $color-alice-blue;
+
+  dt {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  dd {
+    margin: 0;
+  }
+}

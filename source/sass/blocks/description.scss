@@ -1,0 +1,28 @@
+.description {
+  margin-bottom: 120px;
+
+  h2 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    margin-top: 66px;
+    margin-bottom: 40px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 0;
+    width: 520px;
+  }
+
+  img {
+    width: 560px;
+    height: 301px;
+  }
+}
+
+.description__wrapper {
+  display: flex;
+  justify-content: space-between;
+}

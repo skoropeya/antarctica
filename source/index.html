@@ -15,57 +15,65 @@
 
     <header class="page-header">
       <div class="container">
-        <a class="page-header__link-logo" href="#">
-          <img class="page-header__logo" src="img/svg/logo.svg" width="70" height="38"
-            alt="Логотип туристического проекта Круизы в Антарктику">
-        </a>
+        <div class="page-header__wrapper">
+          <a class="page-header__link-logo">
+            <img class="page-header__logo" src="img/svg/logo.svg" width="70" height="38"
+              alt="Логотип туристического проекта Круизы в Антарктику">
+          </a>
 
-        <nav class="page-header__nav main-nav main-nav--no-js">
-          <!-- main-nav__toggle появляется только в мобильной версии -->
-          <!-- main-nav__toggle--closed если меню закрыто -->
-          <!-- main-nav__toggle--opened если меню открыто -->
-          <button class="main-nav__toggle main-nav__toggle--closed" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
+          <nav class="page-header__nav main-nav main-nav--no-js">
+            <!-- main-nav__toggle появляется только в мобильной версии -->
+            <!-- main-nav__toggle--closed если меню закрыто -->
+            <!-- main-nav__toggle--opened если меню открыто -->
+            <button class="main-nav__toggle main-nav__toggle--closed" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
 
-          <!-- main-nav__list-box--closed если меню закрыто в мобильной версии -->
-          <!-- main-nav__list-box--opened если меню открыто в мобильной версии -->
-          <div class="main-nav__list-box main-nav__list-box--closed">
-            <ul class="main-nav__list menu">
-              <li class="menu__item">
-                <a class="menu__link" href="#">Преимущества</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Направления</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Ближайшие круизы</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Контакты</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+            <!-- main-nav__list-box--closed если меню закрыто в мобильной версии -->
+            <!-- main-nav__list-box--opened если меню открыто в мобильной версии -->
+            <div class="main-nav__list-box main-nav__list-box--closed">
+              <ul class="main-nav__list menu">
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Преимущества</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Направления</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Ближайшие круизы</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
 
     <main class="page-main">
       <section class="promo">
         <div class="container">
-          <h1>Круизы в Антарктику</h1>
-          <p>Волшебный мир айсбергов и пингвинов</p>
+          <div class="promo__wrapper">
+            <h1>Круизы в Антарктику</h1>
+            <p>Волшебный мир айсбергов и пингвинов</p>
+          </div>
         </div>
       </section>
 
       <section class="description">
         <div class="container">
-          <h2 class="description__title">Путешествие на край Земли</h2>
-          <p class="description__text">Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
-          <picture>
-            <source type="image/webp" srcset="img/content/penguins.webp 1x, img/content/penguins@2x.webp 2x">
-            <img class="description__img" src="img/content/penguins.jpg" srcset="img/content/penguins@2x.jpg 2x" width="560" height="301" alt="Пингвины на снегу">
-          </picture>
+          <div class="description__wrapper">
+            <div class="description__box">
+              <h2 class="description__title">Путешествие на край Земли</h2>
+              <p class="description__text">Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+            </div>
+            <picture>
+              <source type="image/webp" srcset="img/content/penguins.webp 1x, img/content/penguins@2x.webp 2x">
+              <img class="description__img" src="img/content/penguins.jpg" srcset="img/content/penguins@2x.jpg 2x" width="560" height="301" alt="Пингвины на снегу">
+            </picture>
+          </div>
         </div>
       </section>
 
@@ -341,56 +349,58 @@
 
     <footer class="page-footer">
       <div class="container">
-        <div class="page-footer__box page-footer__box--logo">
-          <a class="page-footer__link-logo" href="#">
-            <img class="page-footer__logo" src="img/svg/logo.svg" width="70" height="38" alt="Логотип туристического проекта Круизы в Антарктику">
-          </a>
-        </div>
+        <div class="page-footer__wrapper">
+          <div class="page-footer__box page-footer__box--logo">
+            <a class="page-footer__link-logo">
+              <img class="page-footer__logo" src="img/svg/logo.svg" width="70" height="38" alt="Логотип туристического проекта Круизы в Антарктику">
+            </a>
+          </div>
 
-        <div class="page-footer__box page-footer__box--menu">
-          <ul class="page-footer__list menu">
-            <li class="menu__item">
-              <a class="menu__link" href="#">Преимущества</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Направления</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Ближайшие круизы</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </div>
+          <div class="page-footer__box page-footer__box--menu">
+            <ul class="page-footer__list menu">
+              <li class="menu__item">
+                <a class="menu__link" href="#">Преимущества</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Направления</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Ближайшие круизы</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
 
-        <div class="page-footer__box page-footer__box--social">
-          <ul class="page-footer__social-list">
-            <li class="page-footer__social-item">
-              <a class="page-footer__link" href="#">
-                <span class="visually-hidden">Facebook</span>
-                <svg class="page-footer__social-icon" width="20" height="20">
-                  <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="page-footer__social-item">
-              <a class="page-footer__link" href="#">
-                <span class="visually-hidden">Instagram</span>
-                <svg class="page-footer__social-icon" width="20" height="20">
-                  <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="page-footer__social-item">
-              <a class="page-footer__link" href="#">
-                <span class="visually-hidden">Twitter</span>
-                <svg class="page-footer__social-icon" width="20" height="20">
-                  <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          <div class="page-footer__box page-footer__box--social">
+            <ul class="page-footer__social-list">
+              <li class="page-footer__social-item">
+                <a class="page-footer__link" href="#">
+                  <span class="visually-hidden">Facebook</span>
+                  <svg class="page-footer__social-icon" width="20" height="20">
+                    <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="page-footer__social-item">
+                <a class="page-footer__link" href="#">
+                  <span class="visually-hidden">Instagram</span>
+                  <svg class="page-footer__social-icon" width="20" height="20">
+                    <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="page-footer__social-item">
+                <a class="page-footer__link" href="#">
+                  <span class="visually-hidden">Twitter</span>
+                  <svg class="page-footer__social-icon" width="20" height="20">
+                    <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>
