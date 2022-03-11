@@ -13,7 +13,7 @@
 <body class="page-body">
   <div class="wrapper">
 
-    <header class="page-header">
+    <header class="page-header page-header--main-page">
       <div class="container">
         <div class="page-header__wrapper">
           <a class="page-header__link-logo">
@@ -65,14 +65,16 @@
       <section class="description">
         <div class="container">
           <div class="description__wrapper">
-            <div class="description__box">
-              <h2 class="description__title">Путешествие на край Земли</h2>
-              <p class="description__text">Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+            <div class="description__box description__box--text">
+              <h2 class="description__title">Путешествие <br>на&nbsp;край Земли</h2>
+              <p class="description__text">Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
             </div>
-            <picture>
-              <source type="image/webp" srcset="img/content/penguins.webp 1x, img/content/penguins@2x.webp 2x">
-              <img class="description__img" src="img/content/penguins.jpg" srcset="img/content/penguins@2x.jpg 2x" width="560" height="301" alt="Пингвины на снегу">
-            </picture>
+            <div class="description__box description__box--img">
+              <picture>
+                <source type="image/webp" srcset="img/content/penguins.webp 1x, img/content/penguins@2x.webp 2x">
+                <img class="description__img" src="img/content/penguins.jpg" srcset="img/content/penguins@2x.jpg 2x" width="560" height="301" alt="Пингвины на снегу">
+              </picture>
+            </div>
           </div>
         </div>
       </section>
@@ -83,15 +85,15 @@
           <dl class="features__list">
             <div class="features__box">
               <dt class="features__item">Небольшой круизный лайнер</dt>
-              <dd class="features__description">Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность насладиться видами и природой.</dd>
+              <dd class="features__description">Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</dd>
             </div>
             <div class="features__box">
               <dt class="features__item">Система все включено</dt>
-              <dd class="features__description">Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для вас 24 часа.</dd>
+              <dd class="features__description">Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;. Великолепные блюда и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.</dd>
             </div>
             <div class="features__box">
               <dt class="features__item">Экскурсионные туры на Zodiac</dt>
-              <dd class="features__description">Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiac в сопровождении опытных экскурсоводов.</dd>
+              <dd class="features__description">Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiac в&nbsp;сопровождении опытных экскурсоводов.</dd>
             </div>
           </dl>
         </div>
@@ -301,11 +303,11 @@
         <div class="container">
           <div class="booking__box booking__box--leading">
             <h2 class="booking__title">Раннее бронирование</h2>
-            <p class="booking__text">Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%</p>
+            <p class="booking__text">Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
           </div>
 
           <div class="booking__box booking__box--form">
-            <p class="booking__invite">Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+            <p class="booking__invite">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
             <form class="booking__form form" method="post">
               <label class="visually-hidden" for="user-name">Укажите имя</label>
               <input class="form__input form__input--name" type="text" name="user-name" id="user-name" placeholder="Имя" required>

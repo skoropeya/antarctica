@@ -1,16 +1,28 @@
 .page-header {
-  background-color: $color-transparent;
-  z-index: 5;
+  background-color: $color-lochmara;
+
+  &--main-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $color-transparent;
+  }
 }
 
 .page-header__wrapper {
   display: flex;
   justify-content: space-between;
   padding-top: 35px;
+
+  @include vp-767 {
+    padding-top: 20px;
+  }
 }
 
 .page-header__link-logo {
     align-self: center;
+    margin-right: 15px;
 }
 
 .page-header__link-logo img {
