@@ -4,6 +4,10 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+
+  @include vp-319 {
+    flex-direction: column;
+  }
 }
 
 .menu__item {
@@ -17,6 +21,16 @@
   @include vp-767 {
     &:not(:last-child) {
       margin-right: 23px;
+    }
+  }
+
+  @include vp-319 {
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    &:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 10px;
     }
   }
 }
@@ -35,5 +49,17 @@
   @include vp-767 {
     font-size: 14px;
     line-height: 17px;
+  }
+
+  @include vp-319 {
+    font-size: 18px;
+    line-height: 22px;
+    color: $color-tangaroa;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: lighten($color-tangaroa, 30%);
+    }
   }
 }

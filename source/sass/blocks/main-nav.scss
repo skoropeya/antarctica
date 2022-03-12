@@ -1,3 +1,164 @@
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 35px;
+
+  @include vp-767 {
+    padding-top: 20px;
+  }
+}
+
+.main-nav__link-logo {
+  align-self: center;
+  margin-right: 15px;
+  color: $color-alice-blue;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($color-alice-blue, 30%);
+  }
+}
+
+.main-nav__logo {
+width: 70px;
+height: 38px;
+
+@include vp-767 {
+  width: 38px;
+  height: 20px;
+}
+
+@include vp-319 {
+  width: 42px;
+  height: 22px;
+}
+}
+
 .main-nav__toggle {
   display: none;
+  background-color: $color-transparent;
+  border: none;
+  padding: 0;
+  width: 24px;
+  height: 12px;
+  cursor: pointer;
+}
+
+@include vp-319  {
+  .main-nav {
+     position: relative;
+  }
+
+  .main-nav__toggle {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 25px;
+  }
+
+  .main-nav--closed {
+    .main-nav__toggle::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 24px;
+      height: 2px;
+      background-color: $color-alice-blue;
+      box-shadow: 0 6px 0 0 $color-alice-blue, 0 12px 0 0 $color-alice-blue;
+    }
+
+    .main-nav__toggle:active:before {
+      background-color: darken($color-alice-blue, 30%);
+      box-shadow: 0 6px 0 0 darken($color-alice-blue, 30%), 0 12px 0 0 darken($color-alice-blue, 30%);
+    }
+  }
+
+  .main-nav--opened {
+    background-color: $color-alice-blue;
+    right: -15px;
+    top: 0;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 15px;
+
+    .main-nav__link-logo {
+      align-self: flex-start;
+      margin-bottom: 30px;
+      color: $color-tangaroa;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: lighten($color-tangaroa, 30%);
+      }
+    }
+
+    .main-nav__toggle {
+      right: 15px;
+    }
+
+    .main-nav__toggle::before,
+    .main-nav__toggle::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 18px;
+      height: 2px;
+      background-color: $color-tangaroa;
+      box-shadow: none;
+    }
+
+    .main-nav__toggle::before {
+      transform: rotate(45deg);
+     }
+
+    .main-nav__toggle::after {
+      transform: rotate(-45deg);
+    }
+
+    .main-nav__toggle:active:before,
+    .main-nav__toggle:active:after {
+      background-color: lighten($color-tangaroa, 30%);
+    }
+  }
+
+  .main-nav__list-box {
+    &--closed {
+      display: none;
+    }
+
+    &--opened {
+      display: block;
+    }
+  }
+
+  // .main-nav--no-js {
+  //   background-color: $color-alice-blue;
+  //   flex-direction: column;
+  //   justify-content: flex-start;
+  //   padding-left: 15px;
+
+  //   .main-nav__link-logo {
+  //     align-self: flex-start;
+  //     color: $color-tangaroa;
+
+  //     &:hover,
+  //     &:focus,
+  //     &:active {
+  //       color: lighten($color-tangaroa, 30%);
+  //     }
+  //   }
+
+  //   .main-nav__toggle {
+  //     display: none;
+  //   }
+
+  //   .main-nav__list-box {
+  //     display: block;
+  //   }
+  // }
 }

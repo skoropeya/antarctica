@@ -13,26 +13,27 @@
 <body class="page-body">
   <div class="wrapper">
 
-    <header class="page-header page-header--main-page">
+    <header class="page-header page-header--main-page page-header--no-js">
       <div class="container">
-        <div class="page-header__wrapper">
-          <a class="page-header__link-logo">
-            <img class="page-header__logo" src="img/svg/logo.svg" width="70" height="38"
-              alt="Логотип туристического проекта Круизы в Антарктику">
-          </a>
 
-          <nav class="page-header__nav main-nav main-nav--no-js">
-            <!-- main-nav__toggle появляется только в мобильной версии -->
-            <!-- main-nav__toggle--closed если меню закрыто -->
-            <!-- main-nav__toggle--opened если меню открыто -->
-            <button class="main-nav__toggle main-nav__toggle--closed" type="button">
+          <!-- main-nav--closed если меню закрыто -->
+          <!-- main-nav--opened если меню открыто -->
+          <nav class="page-header__nav main-nav main-nav--closed main-nav--no-js">
+            <a class="main-nav__link-logo">
+              <span class="visually-hidden">Логотип туристического проекта Круизы в Антарктику</span>
+              <svg class="main-nav__logo" width="70" height="38">
+                <use xlink:href="img/sprite_auto.svg#logo"></use>
+              </svg>
+            </a>
+
+            <button class="main-nav__toggle" type="button">
               <span class="visually-hidden">Открыть меню</span>
             </button>
 
             <!-- main-nav__list-box--closed если меню закрыто в мобильной версии -->
             <!-- main-nav__list-box--opened если меню открыто в мобильной версии -->
             <div class="main-nav__list-box main-nav__list-box--closed">
-              <ul class="main-nav__list menu">
+              <ul class="main-nav__list menu menu--header">
                 <li class="menu__item">
                   <a class="menu__link" href="#">Преимущества</a>
                 </li>
@@ -48,7 +49,6 @@
               </ul>
             </div>
           </nav>
-        </div>
       </div>
     </header>
 
@@ -56,8 +56,8 @@
       <section class="promo">
         <div class="container">
           <div class="promo__wrapper">
-            <h1>Круизы в Антарктику</h1>
-            <p>Волшебный мир айсбергов и пингвинов</p>
+            <h1>Круизы в&nbsp;Антарктику</h1>
+            <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
           </div>
         </div>
       </section>
@@ -359,7 +359,7 @@
           </div>
 
           <div class="page-footer__box page-footer__box--menu">
-            <ul class="page-footer__list menu">
+            <ul class="page-footer__list menu menu--footer">
               <li class="menu__item">
                 <a class="menu__link" href="#">Преимущества</a>
               </li>
