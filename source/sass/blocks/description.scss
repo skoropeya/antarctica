@@ -29,9 +29,16 @@
     width: 560px;
     height: 301px;
   }
+}
 
-  @include vp-767 {
-    margin-bottom: 100px;
+.description__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+@include vp-767 {
+  .description {
+    margin-bottom: 80px;
 
     br {
       display: inline;
@@ -54,11 +61,45 @@
     .description__box--img {
       width: 324px;
       height: 264px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 }
 
-.description__wrapper {
-  display: flex;
-  justify-content: space-between;
+@include vp-319 {
+  .description {
+    margin-bottom: 65px;
+
+    h2 {
+      font-size: 24px;
+      line-height: 34px;
+      margin-bottom: 17px;
+    }
+
+    p {
+      margin-bottom: 33px;
+      width: auto;
+    }
+
+    .description__wrapper {
+      flex-direction: column;
+    }
+
+    .description__box--img {
+      width: 290px;
+      height: 186px;
+
+    }
+
+    img {
+
+    }
+  }
 }
