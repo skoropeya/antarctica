@@ -46,7 +46,9 @@
 }
 
 .menu--header {
-  flex-direction: column;
+  @include vp-319 {
+    flex-direction: column;
+  }
 
   .menu__item a {
     @include vp-319 {
