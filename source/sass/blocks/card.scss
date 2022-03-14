@@ -92,36 +92,42 @@
 
 .card--odysseus {
   img {
-    top: -28px;
-    left: -28px;
+    width: 310px;
+    top: 0;
+    left: -35px;
   }
 }
 
 .card--olimpiya {
   img {
-    top: -18px;
-    left: 0;
+    width: 320px;
+    top: 0;
+    left: -3px;
   }
 }
 
 .card--aurora {
   img {
     top: 0;
-    left: -15px;
+    left: -19px;
   }
 }
 
 .card--leonor {
   img {
+    width: 284px;
+    height: 100%;
     top: 0;
-    left: -22px;
+    left: -6px;
   }
 }
 
 .card--minion {
   img {
+    width: 287px;
+    height: 100%;
     top: 0;
-    left: -11px;
+    left: -14px;
   }
 }
 
@@ -162,6 +168,58 @@
     width: 309px;
   }
 
+  .card--astoriya {
+    img {
+      left: -49px;
+    }
+  }
+
+  .card--elain {
+    img {
+      left: -49px;
+    }
+  }
+
+  .card--atlantis {
+    img {
+      left: 0;
+    }
+  }
+
+  .card--odysseus {
+    img {
+      width: auto;
+      left: -18px;
+    }
+  }
+
+  .card--olimpiya {
+    img {
+      width: auto;
+      left: -21px;
+    }
+  }
+
+  .card--aurora {
+    img {
+      left: -14px;
+    }
+  }
+
+  .card--leonor {
+    img {
+      width: auto;
+      left: -9px;
+    }
+  }
+
+  .card--minion {
+    img {
+      width: auto;
+      left: -15px;
+    }
+  }
+
   .card__box {
     width: 309px;
     padding: 70px 35px 35px 35px;
@@ -186,13 +244,69 @@
 @include vp-320 {
   .card {
     h3 {
-      margin-bottom: 25px;
+      margin-bottom: 19px;
       margin-left: 25px;
     }
   }
 
   .card__img-box {
     width: 270px;
+  }
+
+  .card--astoriya {
+    img {
+      left: -69px;
+    }
+  }
+
+  .card--elain {
+    img {
+      left: -69px;
+    }
+  }
+
+  .card--atlantis {
+    img {
+      left: -20px;
+    }
+  }
+
+  .card--odysseus {
+    img {
+      width: 295px;
+      height: 455px;
+      left: -17px;
+    }
+  }
+
+  .card--olimpiya {
+    img {
+      width: 300px;
+      height: 400px;
+      left: -17px;
+    }
+  }
+
+  .card--aurora {
+    img {
+      left: -34px;
+    }
+  }
+
+  .card--leonor {
+    img {
+      width: 298px;
+      height: 386px;
+      left: -8px;
+    }
+  }
+
+  .card--minion {
+    img {
+      width: 298px;
+      height: 390px;
+      left: -15px;
+    }
   }
 
   .card__box {

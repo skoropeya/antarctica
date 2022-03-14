@@ -49,6 +49,8 @@
   }
 
   .cruises__list {
+    padding-left: 10px;
+    padding-right: 10px;
     grid-template-columns: repeat(auto-fill, 270px);
   }
 }
