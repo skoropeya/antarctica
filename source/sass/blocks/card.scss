@@ -65,19 +65,8 @@
 }
 
 .card__link-booking {
-  font-weight: 600;
-  background-color: $color-alice-blue;
-  color: $color-tangaroa;
-  padding: 10px;
+  margin: 0;
   margin-top: auto;
-  display: block;
-  text-align: center;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: darken($color-alice-blue, 20%);
-  }
 }
 
 .card--astoriya {
@@ -145,5 +134,55 @@
 
   .card__img-box {
     z-index: 0;
+  }
+}
+
+@include vp-767 {
+  .card {
+    h3 {
+      margin-bottom: 28px;
+      margin-left: 35px;
+    }
+  }
+
+  .card__img-box {
+    width: 309px;
+  }
+
+  .card__box {
+    width: 309px;
+    padding: 70px 35px 35px 35px;
+  }
+
+  .card:hover,
+  .card:focus {
+    h3 {
+      margin: 27px 35px 0 35px;
+    }
+  }
+}
+
+@include vp-319 {
+  .card {
+    h3 {
+      margin-bottom: 25px;
+      margin-left: 25px;
+    }
+  }
+
+  .card__img-box {
+    width: 270px;
+  }
+
+  .card__box {
+    width: 270px;
+    padding: 70px 25px 35px 25px;
+  }
+
+  .card:hover,
+  .card:focus {
+    h3 {
+      margin: 27px 25px 0 25px;
+    }
   }
 }
