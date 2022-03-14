@@ -23,11 +23,15 @@
   .description__box--img {
     width: 560px;
     height: 301px;
+    position: relative;
+    overflow: hidden;
   }
 
   img {
-    width: 560px;
-    height: 301px;
+    max-width: none;
+    position: absolute;
+    top: -35px;
+    left: -101px;
   }
 }
 
@@ -61,14 +65,12 @@
     .description__box--img {
       width: 324px;
       height: 264px;
-      position: relative;
-      overflow: hidden;
     }
 
     img {
-      position: absolute;
+      width: 466px;
       top: 0;
-      left: 0;
+      left: -70px;
     }
   }
 }
@@ -95,11 +97,12 @@
     .description__box--img {
       width: 290px;
       height: 186px;
-
     }
 
     img {
-
+      width: 329px;
+      top: 0;
+      left: -19px;
     }
   }
 }
