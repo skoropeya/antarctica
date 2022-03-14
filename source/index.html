@@ -333,28 +333,32 @@
 
       <section class="booking">
         <div class="container">
-          <div class="booking__box booking__box--leading">
-            <h2 class="booking__title">Раннее бронирование</h2>
-            <p class="booking__text">Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
-          </div>
+          <div class="booking__wrapper">
+            <div class="booking__box booking__box--leading">
+              <h2 class="booking__title">Раннее бронирование</h2>
+              <p class="booking__text">Забронируйте тур <br class="booking__mobile-break">за&nbsp;3-6 месяцев <br>до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
+            </div>
 
-          <div class="booking__box booking__box--form">
-            <p class="booking__invite">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
-            <form class="booking__form form" method="post">
-              <label class="visually-hidden" for="user-name">Укажите имя</label>
-              <input class="form__input form__input--name" type="text" name="user-name" id="user-name" placeholder="Имя" required>
+            <div class="booking__box booking__box--form">
+              <p class="booking__invite">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
+              <form class="booking__form form" method="post">
+                <label class="visually-hidden" for="user-name">Укажите имя</label>
+                <input class="form__input form__input--name" type="text" name="user-name" id="user-name" placeholder="Имя" required>
 
-              <label class="visually-hidden" for="user-phone">Укажите телефон для связи</label>
-              <input class="form__input form__input--phone" type="tel" name="user-phone" id="user-phone" placeholder="Телефон" required>
+                <label class="visually-hidden" for="user-phone">Укажите телефон для связи</label>
+                <input class="form__input form__input--phone" type="tel" name="user-phone" id="user-phone" placeholder="Телефон" required>
 
-              <label class="visually-hidden" for="user-email">Укажите электронную почту</label>
-              <input class="form__input form__input--email" type="email" name="user-email" id="user-email" placeholder="Email" required>
+                <label class="visually-hidden" for="user-email">Укажите электронную почту</label>
+                <input class="form__input form__input--email" type="email" name="user-email" id="user-email" placeholder="Email" required>
 
-              <input class="form__input form__input--agreement" type="checkbox" id="user-agreement" checked required>
-              <label class="form__label" for="user-agreement">Я согласен на обработку моих персональных данных</label>
+                <div class="form__box">
+                  <input class="form__input form__input--agreement visually-hidden" type="checkbox" id="user-agreement" checked required>
+                  <label class="form__label" for="user-agreement">Я согласен на обработку моих персональных данных</label>
+                </div>
 
-              <button class="form__submit btn" type="submit">Оставить заявку</button>
-            </form>
+                <button class="form__submit btn" type="submit">Оставить заявку</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>

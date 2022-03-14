@@ -86,6 +86,7 @@
     background-image: url("../img/back/back-features-tablet.jpg");
     padding-top: 87px;
     padding-bottom: 100px;
+    margin-bottom: 88px;
 
     @include retina {
       background-image: url("../img/back/back-features-tablet@2x.jpg");
@@ -149,6 +150,7 @@
     background-image: url("../img/back/back-features-mobile.jpg");
     padding-top: 57px;
     padding-bottom: 65px;
+    margin-bottom: 55px;
 
     @include retina {
       background-image: url("../img/back/back-features-mobile@2x.jpg");
