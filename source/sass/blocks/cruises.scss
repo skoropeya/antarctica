@@ -21,7 +21,7 @@
   grid-template-columns: repeat(auto-fill, 260px);
 }
 
-@include vp-767 {
+@include vp-768 {
   .cruises {
     margin-bottom: 100px;
 
@@ -33,12 +33,11 @@
   }
 
   .cruises__list {
-    gap: 29px;
     grid-template-columns: repeat(auto-fill, 309px);
   }
 }
 
-@include vp-319 {
+@include vp-320 {
   .cruises {
     margin-bottom: 65px;
 
@@ -50,7 +49,6 @@
   }
 
   .cruises__list {
-    gap: 30px;
     grid-template-columns: repeat(auto-fill, 270px);
   }
 }

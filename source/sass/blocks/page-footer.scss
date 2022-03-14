@@ -26,8 +26,13 @@
 .page-footer__link-logo {
   color: $color-alice-blue;
 
-  &:hover,
-  &:focus,
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      color: darken($color-alice-blue, 30%);
+    }
+  }
+
   &:active {
     color: darken($color-alice-blue, 30%);
   }
@@ -50,14 +55,19 @@
 .page-footer__social-item a {
   color: $color-alice-blue;
 
-  &:hover,
-  &:focus,
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      color: darken($color-alice-blue, 30%);
+    }
+  }
+
   &:active {
     color: darken($color-alice-blue, 30%);
   }
 }
 
-@include vp-767 {
+@include vp-768 {
   .page-footer__box--logo {
     margin-right: 25px;
   }
@@ -78,7 +88,7 @@
   }
 }
 
-@include vp-319 {
+@include vp-320 {
   .page-footer {
     padding-top: 40px;
     padding-bottom: 40px;

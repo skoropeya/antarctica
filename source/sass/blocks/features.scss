@@ -81,7 +81,7 @@
   }
 }
 
-@include vp-767 {
+@include vp-768 {
   .features {
     background-image: url("../img/back/back-features-tablet.jpg");
     padding-top: 87px;
@@ -98,7 +98,7 @@
   }
 
   .features__list {
-    gap: 29px;
+    gap: 30px;
     grid-template-columns: repeat(auto-fill, 206px);
   }
 
@@ -144,7 +144,7 @@
   }
 }
 
-@include vp-319 {
+@include vp-320 {
   .features {
     background-image: url("../img/back/back-features-mobile.jpg");
     padding-top: 57px;
@@ -162,7 +162,6 @@
   }
 
   .features__list {
-    gap: 30px;
     grid-template-columns: repeat(auto-fill, 290px);
   }
 

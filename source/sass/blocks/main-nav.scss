@@ -3,7 +3,7 @@
   justify-content: space-between;
   padding-top: 40px;
 
-  @include vp-767 {
+  @include vp-768 {
     padding-top: 30px;
   }
 }
@@ -13,8 +13,13 @@
   margin-right: 15px;
   color: $color-alice-blue;
 
-  &:hover,
-  &:focus,
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      color: darken($color-alice-blue, 30%);
+    }
+  }
+
   &:active {
     color: darken($color-alice-blue, 30%);
   }
@@ -24,12 +29,12 @@
 width: 70px;
 height: 38px;
 
-@include vp-767 {
+@include vp-768 {
   width: 38px;
   height: 20px;
 }
 
-@include vp-319 {
+@include vp-320 {
   width: 42px;
   height: 22px;
 }
@@ -45,7 +50,7 @@ height: 38px;
   cursor: pointer;
 }
 
-@include vp-319  {
+@include vp-320  {
   .main-nav {
      position: relative;
   }
@@ -90,8 +95,13 @@ height: 38px;
       margin-bottom: 30px;
       color: $color-tangaroa;
 
-      &:hover,
-      &:focus,
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:hover,
+        &:focus {
+          color: lighten($color-tangaroa, 30%);
+        }
+      }
+
       &:active {
         color: lighten($color-tangaroa, 30%);
       }
@@ -146,11 +156,16 @@ height: 38px;
   //     align-self: flex-start;
   //     color: $color-tangaroa;
 
-  //     &:hover,
-  //     &:focus,
-  //     &:active {
-  //       color: lighten($color-tangaroa, 30%);
-  //     }
+        // @media (hover: hover), screen and (min-width: 0\0) {
+        //     &:hover,
+        //     &:focus {
+        //       color: lighten($color-tangaroa, 30%);
+        //     }
+        // }
+
+        // &:active {
+        //     color: lighten($color-tangaroa, 30%);
+        // }
   //   }
 
   //   .main-nav__toggle {
