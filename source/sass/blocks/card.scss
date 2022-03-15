@@ -329,3 +329,26 @@
     }
   }
 }
+
+.card[data-is-touch="true"] {
+  h3 {
+    margin: 27px 25px 0 25px;
+    height: min-content;
+  }
+
+  .card__img-box {
+    z-index: 0;
+  }
+
+  @include vp-768 {
+    h3 {
+      margin: 27px 35px 0 35px;
+    }
+  }
+
+  @include vp-320 {
+    h3 {
+      margin: 27px 25px 0 25px;
+    }
+  }
+}
