@@ -35,16 +35,16 @@
             <div class="main-nav__list-box main-nav__list-box--closed">
               <ul class="main-nav__list menu menu--header">
                 <li class="menu__item">
-                  <a class="menu__link" href="#">Преимущества</a>
+                  <a class="menu__link" href="#features">Преимущества</a>
                 </li>
                 <li class="menu__item">
-                  <a class="menu__link" href="#">Направления</a>
+                  <a class="menu__link" href="#direction">Направления</a>
                 </li>
                 <li class="menu__item">
-                  <a class="menu__link" href="#">Ближайшие круизы</a>
+                  <a class="menu__link" href="#cruises">Ближайшие круизы</a>
                 </li>
                 <li class="menu__item">
-                  <a class="menu__link" href="#">Контакты</a>
+                  <a class="menu__link" href="#contacts">Контакты</a>
                 </li>
               </ul>
             </div>
@@ -64,12 +64,13 @@
 
       <section class="description">
         <div class="container">
-          <div class="description__wrapper">
+          <div class="description__wrapper" id="direction">
             <div class="description__box description__box--text">
               <h2 class="description__title">Путешествие <br>на&nbsp;край Земли</h2>
               <p class="description__text">Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
             </div>
             <div class="description__box description__box--img">
+              <!-- 1х: 685px x 385px; 2x: 1370px x 770px -->
               <picture>
                 <source type="image/webp" srcset="img/content/penguins.webp 1x, img/content/penguins@2x.webp 2x">
                 <img class="description__img" src="img/content/penguins.jpg" srcset="img/content/penguins@2x.jpg 2x" width="685" height="385" alt="Пингвины на снегу">
@@ -81,7 +82,7 @@
 
       <section class="features">
         <div class="container">
-          <h2 class="features__title">Преимущества</h2>
+          <h2 class="features__title" id="features">Преимущества</h2>
           <dl class="features__list">
             <div class="features__box features__box--ship">
               <dt class="features__item">Небольшой круизный лайнер</dt>
@@ -101,13 +102,14 @@
 
       <section class="cruises">
         <div class="container">
-          <h2 class="cruises__title">Ближайшие круизы</h2>
+          <h2 class="cruises__title" id="cruises">Ближайшие круизы</h2>
 
           <ul class="cruises__list">
             <li class="cruises__item card card--astoriya">
               <h3 class="card__name">Круиз &ldquo;Астория&rdquo;</h3>
               <div class="card__img-box">
                 <div class="card__overlay"></div>
+                <!-- 1х: 400px x 386px; 2x: 800px x 772px -->
                 <picture>
                   <source type="image/webp" srcset="img/content/cruise-astoriya.webp 1x, img/content/cruise-astoriya@2x.webp 2x">
                   <img class="card__img" src="img/content/cruise-astoriya.jpg" srcset="img/content/cruise-astoriya@2x.jpg 2x" width="400" height="386" alt="Ледяные горы">
@@ -136,6 +138,7 @@
               <h3 class="card__name">Круиз &ldquo;Элайн&rdquo;</h3>
               <div class="card__img-box">
                 <div class="card__overlay"></div>
+                <!-- 1х: 400px x 386px; 2x: 800px x 772px -->
                 <picture>
                   <source type="image/webp" srcset="img/content/cruise-astoriya.webp 1x, img/content/cruise-astoriya@2x.webp 2x">
                   <img class="card__img" src="img/content/cruise-astoriya.jpg" srcset="img/content/cruise-astoriya@2x.jpg 2x" width="400" height="386" alt="Ледяные горы">
@@ -164,6 +167,7 @@
               <h3 class="card__name">Круиз &ldquo;Атлантис&rdquo;</h3>
               <div class="card__img-box">
                 <div class="card__overlay"></div>
+                <!-- 1х: 309px x 386px; 2x: 618px x 772px -->
                 <picture>
                   <source type="image/webp" srcset="img/content/cruise-atlantis.webp 1x, img/content/cruise-atlantis@2x.webp 2x">
                   <img class="card__img" src="img/content/cruise-atlantis.jpg" srcset="img/content/cruise-atlantis@2x.jpg 2x" width="309" height="386" alt="Ледяные глыбы в воде">
@@ -192,6 +196,7 @@
               <h3 class="card__name">Круиз &ldquo;Одиссей&rdquo;</h3>
               <div class="card__img-box">
                 <div class="card__overlay"></div>
+                <!-- 1х: 335px x 455px; 2x: 670px x 910px -->
                 <picture>
                   <source type="image/webp" srcset="img/content/cruise-odysseus.webp 1x, img/content/cruise-odysseus@2x.webp 2x">
                   <img class="card__img" src="img/content/cruise-odysseus.jpg" srcset="img/content/cruise-odysseus@2x.jpg 2x" width="335" height="455" alt="Ледяные горы, вода и облака">
@@ -220,6 +225,7 @@
               <h3 class="card__name">Круиз &ldquo;Олимпия&rdquo;</h3>
               <div class="card__img-box">
                 <div class="card__overlay"></div>
+                <!-- 1х: 345px x 400px; 2x: 690px x 800px -->
                 <picture>
                   <source type="image/webp" srcset="img/content/cruise-olimpiya.webp 1x, img/content/cruise-olimpiya@2x.webp 2x">
                   <img class="card__img" src="img/content/cruise-olimpiya.jpg" srcset="img/content/cruise-olimpiya@2x.jpg 2x" width="345" height="400" alt="Много пингвинов на фоне айсбергов">
@@ -248,6 +254,7 @@
               <h3 class="card__name">Круиз &ldquo;Аврора&rdquo;</h3>
               <div class="card__img-box">
                 <div class="card__overlay"></div>
+                <!-- 1х: 330px x 386px; 2x: 660px x 772px -->
                 <picture>
                   <source type="image/webp" srcset="img/content/cruise-aurora.webp 1x, img/content/cruise-aurora@2x.webp 2x">
                   <img class="card__img" src="img/content/cruise-aurora.jpg" srcset="img/content/cruise-aurora@2x.jpg 2x" width="330" height="386" alt="Лед, скалы, вода, белое небо">
@@ -276,6 +283,7 @@
               <h3 class="card__name">Круиз &ldquo;Леонор&rdquo;</h3>
               <div class="card__img-box">
                 <div class="card__overlay"></div>
+                <!-- 1х: 340px x 386px; 2x: 680px x 772px -->
                 <picture>
                   <source type="image/webp" srcset="img/content/cruise-leonor.webp 1x, img/content/cruise-leonor@2x.webp 2x">
                   <img class="card__img" src="img/content/cruise-leonor.jpg" srcset="img/content/cruise-leonor@2x.jpg 2x" width="340" height="386" alt="Лодка на фоне ледяных гор">
@@ -304,6 +312,7 @@
               <h3 class="card__name">Круиз &ldquo;Минион - 1&rdquo;</h3>
               <div class="card__img-box">
                 <div class="card__overlay"></div>
+                <!-- 1х: 340px x 390px; 2x: 680px x 780px -->
                 <picture>
                   <source type="image/webp" srcset="img/content/cruise-minion-1.webp 1x, img/content/cruise-minion-1@2x.webp 2x">
                   <img class="card__img" src="img/content/cruise-minion-1.jpg" srcset="img/content/cruise-minion-1@2x.jpg 2x" width="340" height="390" alt="Лед, вода, люди на берегу">
@@ -366,9 +375,10 @@
       <section class="contacts">
         <div class="container">
           <h2 class="visually-hidden">Наши контакты</h2>
-          <div class="contacts__wrapper">
+          <div class="contacts__wrapper" id="contacts">
             <div class="contacts__box contacts__box--map">
               <div class="contacts__map">
+                <!-- 1х: 580px x 335px; 2x: 1160px x 670px -->
                 <picture>
                   <source type="image/webp" srcset="img/content/map.webp 1x, img/content/map@2x.webp 2x">
                   <img class="contacts__map-img" src="img/content/map.jpg" srcset="img/content/map@2x.jpg 2x" width="580" height="335" alt="Адрес на карте г. Санкт Петербург, ул. Большая Конюшенная, 19/8">

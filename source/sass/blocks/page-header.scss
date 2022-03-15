@@ -9,11 +9,13 @@
     background-color: $color-transparent;
   }
 
-  // &--no-js {
-  //   position: static;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   background-color: $color-transparent;
-  // }
+  &--no-js {
+    @include vp-320 {
+      position: static;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: $color-transparent;
+    }
+  }
 }
