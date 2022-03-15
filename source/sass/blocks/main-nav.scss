@@ -66,7 +66,7 @@
     top: 25px;
   }
 
-  .main-nav--closed {
+  .main-nav[data-is-open="false"] {
     .main-nav__toggle::before {
       content: "";
       position: absolute;
@@ -86,7 +86,7 @@
     }
   }
 
-  .main-nav--opened {
+  .main-nav[data-is-open="true"] {
     background-color: $color-alice-blue;
     right: -15px;
     top: 0;
@@ -142,16 +142,16 @@
   }
 
   .main-nav__list-box {
-    &--closed {
+    &[data-is-open="false"] {
       display: none;
     }
 
-    &--opened {
+    &[data-is-open="true"] {
       display: block;
     }
   }
 
-  .main-nav--no-js {
+  .main-nav[data-is-js="false"] {
     @include vp-320 {
       background-color: $color-alice-blue;
       flex-direction: column;

@@ -13,12 +13,10 @@
 <body class="page-body">
   <div class="wrapper">
 
-    <header class="page-header page-header--main-page page-header--no-js">
+    <header class="page-header page-header--main-page" data-is-js="false">
       <div class="container">
 
-          <!-- main-nav--closed если меню закрыто -->
-          <!-- main-nav--opened если меню открыто -->
-          <nav class="page-header__nav main-nav main-nav--closed main-nav--no-js">
+          <nav class="page-header__nav main-nav" data-is-open="false" data-is-js="false">
             <a class="main-nav__link-logo">
               <span class="visually-hidden">Логотип туристического проекта Круизы в Антарктику</span>
               <svg class="main-nav__logo" width="70" height="38">
@@ -30,9 +28,7 @@
               <span class="visually-hidden">Открыть меню</span>
             </button>
 
-            <!-- main-nav__list-box--closed если меню закрыто в мобильной версии -->
-            <!-- main-nav__list-box--opened если меню открыто в мобильной версии -->
-            <div class="main-nav__list-box main-nav__list-box--closed">
+            <div class="main-nav__list-box" data-is-open="false">
               <ul class="main-nav__list menu menu--header">
                 <li class="menu__item">
                   <a class="menu__link" href="#features">Преимущества</a>
@@ -460,7 +456,7 @@
 
   </div>
 
-  <!-- <script src="js/main.min.js"></script> -->
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>

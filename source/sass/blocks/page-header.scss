@@ -9,7 +9,7 @@
     background-color: $color-transparent;
   }
 
-  &--no-js {
+  &[data-is-js="false"] {
     @include vp-320 {
       position: static;
       top: 0;
