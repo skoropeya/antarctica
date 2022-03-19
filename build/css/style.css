@@ -871,6 +871,9 @@ button,
   display: grid;
   gap: 40px;
   grid-template-columns: repeat(auto-fill, 360px);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .features__box {
@@ -941,6 +944,9 @@ button,
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(auto-fill, 260px);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .card {
@@ -1335,6 +1341,10 @@ button,
   width: 560px;
   height: 306px;
   z-index: 2;
+}
+
+.contacts__box--map {
+  margin-right: 10px;
 }
 
 .contacts__box--address {
