@@ -27,6 +27,7 @@
   display: grid;
   gap: 40px;
   grid-template-columns: repeat(auto-fill, 360px);
+  justify-content: center;
 }
 
 .features__box {
