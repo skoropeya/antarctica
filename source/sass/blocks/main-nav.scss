@@ -88,7 +88,7 @@
 
   .main-nav[data-is-open="true"] {
     background-color: $color-alice-blue;
-    right: -15px;
+    right: -20px;
     top: 0;
     height: 100vh;
     flex-direction: column;
@@ -97,7 +97,7 @@
 
     .main-nav__link-logo {
       align-self: flex-start;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       color: $color-tangaroa;
 
       @media (hover: hover), screen and (min-width: 0\0) {
@@ -113,7 +113,7 @@
     }
 
     .main-nav__toggle {
-      right: 15px;
+      right: 17px;
     }
 
     .main-nav__toggle::before,
@@ -148,6 +148,7 @@
 
     &[data-is-open="true"] {
       display: block;
+      padding-left: 10px;
     }
   }
 
