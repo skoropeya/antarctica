@@ -11,13 +11,13 @@
     margin-right: 33px;
   }
 
-  @include vp-768 {
+  @include vp-1365 {
     &:not(:last-child) {
       margin-right: 23px;
     }
   }
 
-  @include vp-320 {
+  @include vp-767 {
     padding-top: 14px;
     padding-bottom: 14px;
 
@@ -44,19 +44,19 @@
     color: darken($color-alice-blue, 30%);
   }
 
-  @include vp-768 {
+  @include vp-1365 {
     font-size: 14px;
     line-height: 17px;
   }
 }
 
 .menu--header {
-  @include vp-320 {
+  @include vp-767 {
     flex-direction: column;
   }
 
   .menu__item a {
-    @include vp-320 {
+    @include vp-767 {
       font-size: 18px;
       line-height: 22px;
       color: $color-tangaroa;
@@ -76,14 +76,14 @@
 }
 
 .menu--footer {
-  @include vp-768 {
+  @include vp-1365 {
     .menu__item a {
       font-size: 12px;
       line-height: 15px;
     }
   }
 
-  @include vp-320 {
+  @include vp-767 {
     flex-direction: column;
   }
 }

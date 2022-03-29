@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   background-position: center;
   padding-top: 110px;
-  padding-bottom: 115px;
+  padding-bottom: 120px;
   margin-bottom: 110px;
 
   @include retina {
@@ -32,7 +32,7 @@
 
 .features__box {
   background-color: $color-alice-blue;
-  padding: 30px;
+  padding: 30px 30px 25px 30px;
   position: relative;
 
   dt {
@@ -82,7 +82,7 @@
   }
 }
 
-@include vp-768 {
+@include vp-1365 {
   .features {
     background-image: url("../img/back/back-features-tablet.jpg");
     padding-top: 87px;
@@ -146,7 +146,7 @@
   }
 }
 
-@include vp-320 {
+@include vp-767 {
   .features {
     background-image: url("../img/back/back-features-mobile.jpg");
     padding-top: 57px;

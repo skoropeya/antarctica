@@ -1,9 +1,9 @@
 .main-nav {
   display: flex;
   justify-content: space-between;
-  padding-top: 40px;
+  padding-top: 35px;
 
-  @include vp-768 {
+  @include vp-1365 {
     padding-top: 30px;
   }
 }
@@ -29,12 +29,12 @@
   width: 70px;
   height: 38px;
 
-  @include vp-768 {
+  @include vp-1365 {
     width: 38px;
     height: 20px;
   }
 
-  @include vp-320 {
+  @include vp-767 {
     width: 42px;
     height: 22px;
   }
@@ -50,7 +50,11 @@
   cursor: pointer;
 }
 
-@include vp-320 {
+.main-nav__list {
+  margin-top: 10px;
+}
+
+@include vp-767 {
   .main-nav {
     position: relative;
   }
@@ -153,7 +157,7 @@
   }
 
   .main-nav[data-is-js="false"] {
-    @include vp-320 {
+    @include vp-767 {
       background-color: $color-alice-blue;
       flex-direction: column;
       justify-content: flex-start;

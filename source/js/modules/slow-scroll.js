@@ -1,6 +1,6 @@
 import {checkMenu, closeMenu} from './menu';
 
-const mediaQuery = window.matchMedia('(max-width: 320px)');
+const mediaQuery = window.matchMedia('(max-width: 768px)');
 
 const onClickMenuItem = (evt) => {
   evt.preventDefault();
