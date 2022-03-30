@@ -4,7 +4,7 @@
   padding-top: 35px;
 
   @include vp-1365 {
-    padding-top: 30px;
+    padding-top: 27px;
   }
 }
 
@@ -48,10 +48,6 @@
   width: 24px;
   height: 12px;
   cursor: pointer;
-}
-
-.main-nav__list {
-  margin-top: 10px;
 }
 
 @include vp-767 {

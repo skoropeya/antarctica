@@ -16,6 +16,10 @@
     z-index: 5;
   }
 
+  dl {
+    margin: 0;
+  }
+
   dt {
     font-weight: 500;
   }
@@ -58,7 +62,6 @@
   padding: 70px 25px 35px 25px;
   display: flex;
   flex-direction: column;
-
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   z-index: 3;
