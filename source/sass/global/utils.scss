@@ -31,6 +31,21 @@
   clip-path: inset(100%);
 }
 
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 6;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-overlay;
+
+  &[data-is-overlay="true"] {
+    display: block;
+  }
+}
+
 // .scroll-lock-ios {
 //   position: fixed;
 

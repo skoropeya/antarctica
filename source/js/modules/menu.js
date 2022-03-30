@@ -1,6 +1,7 @@
 const header = document.querySelector('.page-header');
 const mainNav = document.querySelector('.main-nav');
 const menu = document.querySelector('.main-nav__list-box');
+const overlay = document.querySelector('.overlay');
 
 const useJs = () => {
   header.dataset.isJs = true;
@@ -10,11 +11,13 @@ const useJs = () => {
 const openMenu = () => {
   mainNav.dataset.isOpen = true;
   menu.dataset.isOpen = true;
+  overlay.dataset.isOverlay = true;
 };
 
 const closeMenu = () => {
   mainNav.dataset.isOpen = false;
   menu.dataset.isOpen = false;
+  overlay.dataset.isOverlay = false;
 };
 
 const checkMenu = () => {
