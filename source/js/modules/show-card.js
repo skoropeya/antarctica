@@ -1,6 +1,6 @@
 const cardList = document.querySelector('.cruises__list');
 const cards = document.querySelectorAll('.card');
-const mediaQuery = window.matchMedia('(pointer:coarse)');
+const mediaQuery = window.matchMedia('(hover: none) and (pointer: coarse)');
 
 const onTouchCard = (evt) => {
   evt.preventDefault();
