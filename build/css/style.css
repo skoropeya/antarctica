@@ -591,8 +591,23 @@ button,
   clip-path: inset(100%);
 }
 
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 6;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay[data-is-overlay="true"] {
+  display: block;
+}
+
 .container {
-  width: 100%;
+  width: calc(100 * var(--vw, 1vw));
   max-width: 1366px;
   margin: 0 auto;
   padding: 0 103px;
@@ -630,6 +645,7 @@ button,
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
+  margin-right: 20px;
 }
 
 .page-footer__box--social {
@@ -677,7 +693,7 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 40px;
+  padding-top: 35px;
 }
 
 .main-nav__link-logo {
@@ -730,6 +746,10 @@ button,
 
 .menu__item a:active {
   color: #86afd7;
+}
+
+.menu--header {
+  padding-top: 10px;
 }
 
 .btn {
@@ -852,7 +872,7 @@ button,
   background-repeat: no-repeat;
   background-position: center;
   padding-top: 110px;
-  padding-bottom: 115px;
+  padding-bottom: 120px;
   margin-bottom: 110px;
 }
 
@@ -878,7 +898,7 @@ button,
 
 .features__box {
   background-color: #f9fbfd;
-  padding: 30px;
+  padding: 30px 30px 25px 30px;
   position: relative;
 }
 
@@ -966,6 +986,10 @@ button,
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   z-index: 5;
+}
+
+.card dl {
+  margin: 0;
 }
 
 .card dt {
@@ -1417,7 +1441,7 @@ button,
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1365px) {
   .container {
     padding: 0 45px;
   }
@@ -1440,7 +1464,7 @@ button,
   }
 
   .main-nav {
-    padding-top: 30px;
+    padding-top: 27px;
   }
 
   .main-nav__logo {
@@ -1717,7 +1741,7 @@ button,
   }
 }
 
-@media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 768px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 768px) and (min-resolution: 144dpi), (max-width: 768px) and (min-resolution: 1.5dppx) {
+@media (max-width: 1365px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1365px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1365px) and (min-resolution: 144dpi), (max-width: 1365px) and (min-resolution: 1.5dppx) {
   .promo {
     background-image: url("../img/back/antarctica-desktop@2x.jpg");
   }
@@ -1731,7 +1755,7 @@ button,
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 767px) {
   .container {
     padding: 0 15px;
   }
@@ -1765,7 +1789,7 @@ button,
   }
 
   .page-footer__box--menu {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
     -ms-flex-item-align: start;
     align-self: flex-start;
   }
@@ -1825,7 +1849,7 @@ button,
 
   .main-nav[data-is-open="true"] {
     background-color: #f9fbfd;
-    right: -15px;
+    right: -20px;
     top: 0;
     height: 100vh;
     -webkit-box-orient: vertical;
@@ -1836,12 +1860,13 @@ button,
     -ms-flex-pack: start;
     justify-content: flex-start;
     padding-left: 15px;
+    z-index: 7;
   }
 
   .main-nav[data-is-open="true"] .main-nav__link-logo {
     -ms-flex-item-align: start;
     align-self: flex-start;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     color: #011c40;
   }
 
@@ -1850,7 +1875,7 @@ button,
   }
 
   .main-nav[data-is-open="true"] .main-nav__toggle {
-    right: 15px;
+    right: 17px;
   }
 
   .main-nav[data-is-open="true"] .main-nav__toggle::before,
@@ -1888,11 +1913,12 @@ button,
 
   .main-nav__list-box[data-is-open="true"] {
     display: block;
+    padding-left: 10px;
   }
 
   .menu__item {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 7px;
+    padding-bottom: 21px;
   }
 
   .menu__item:not(:last-child) {
@@ -1922,6 +1948,10 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .menu--footer .menu__item {
+    padding-bottom: 4px;
   }
 
   .promo {
@@ -2188,7 +2218,7 @@ button,
   }
 }
 
-@media (max-width: 320px) and (max-width: 320px) {
+@media (max-width: 767px) and (max-width: 767px) {
   .main-nav[data-is-js="false"] {
     background-color: #f9fbfd;
     -webkit-box-orient: vertical;
@@ -2220,7 +2250,7 @@ button,
   }
 }
 
-@media (max-width: 320px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 320px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 320px) and (min-resolution: 144dpi), (max-width: 320px) and (min-resolution: 1.5dppx) {
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .promo {
     background-image: url("../img/back/antarctica-mobile@2x.jpg");
   }
@@ -2234,7 +2264,7 @@ button,
   }
 }
 
-@media (max-width: 320px) and (hover: hover), screen and (max-width: 320px) and (min-width: 0\0) {
+@media (max-width: 767px) and (hover: hover), screen and (max-width: 767px) and (min-width: 0\0) {
   .main-nav[data-is-open="true"] .main-nav__link-logo:hover,
   .main-nav[data-is-open="true"] .main-nav__link-logo:focus {
     color: #035ed7;
@@ -2251,14 +2281,14 @@ button,
   }
 }
 
-@media (max-width: 320px) and (max-width: 320px) and (hover: hover), screen and (max-width: 320px) and (max-width: 320px) and (min-width: 0\0) {
+@media (max-width: 767px) and (max-width: 767px) and (hover: hover), screen and (max-width: 767px) and (max-width: 767px) and (min-width: 0\0) {
   .main-nav[data-is-js="false"] .main-nav__link-logo:hover,
   .main-nav[data-is-js="false"] .main-nav__link-logo:focus {
     color: #035ed7;
   }
 }
 
-@media (max-width: 768px) and (hover: hover), screen and (max-width: 768px) and (min-width: 0\0) {
+@media (max-width: 1365px) and (hover: hover), screen and (max-width: 1365px) and (min-width: 0\0) {
   .card:hover h3,
   .card:focus h3 {
     margin: 27px 35px 0 35px;
