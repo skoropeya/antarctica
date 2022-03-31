@@ -12,12 +12,14 @@ const openMenu = () => {
   mainNav.dataset.isOpen = true;
   menu.dataset.isOpen = true;
   overlay.dataset.isOverlay = true;
+  document.body.style.overflow = 'hidden';
 };
 
 const closeMenu = () => {
   mainNav.dataset.isOpen = false;
   menu.dataset.isOpen = false;
   overlay.dataset.isOverlay = false;
+  document.body.style.overflow = 'visible';
 };
 
 const checkMenu = () => {
