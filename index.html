@@ -355,7 +355,7 @@
                 <input class="form__input form__input--name" type="text" name="user-name" id="user-name" placeholder="Имя" required>
 
                 <label class="visually-hidden" for="user-phone">Укажите телефон для связи</label>
-                <input class="form__input form__input--phone" type="tel" name="user-phone" id="user-phone" placeholder="Телефон" required>
+                <input class="form__input form__input--phone" type="tel" name="user-phone" id="user-phone" placeholder="Телефон" pattern="[0-9]{11}" required>
 
                 <label class="visually-hidden" for="user-email">Укажите электронную почту</label>
                 <input class="form__input form__input--email" type="email" name="user-email" id="user-email" placeholder="Email" required>
@@ -460,6 +460,7 @@
 
   </div>
 
+  <div class="overlay" data-is-overlay="false"></div>
   <script src="js/main.min.js"></script>
 </body>
 
