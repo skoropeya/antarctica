@@ -1409,7 +1409,8 @@ button,
   }
 
   .card:hover h3,
-  .card:focus h3 {
+  .card:focus h3,
+  .card:focus-within h3 {
     margin: 27px 25px 0 25px;
     height: -webkit-min-content;
     height: -moz-min-content;
@@ -1417,7 +1418,8 @@ button,
   }
 
   .card:hover .card__img-box,
-  .card:focus .card__img-box {
+  .card:focus .card__img-box,
+  .card:focus-within .card__img-box {
     z-index: 0;
   }
 
@@ -2276,7 +2278,8 @@ button,
   }
 
   .card:hover h3,
-  .card:focus h3 {
+  .card:focus h3,
+  .card:focus-within h3 {
     margin: 27px 25px 0 25px;
   }
 }
@@ -2290,7 +2293,8 @@ button,
 
 @media (max-width: 1365px) and (hover: hover), screen and (max-width: 1365px) and (min-width: 0\0) {
   .card:hover h3,
-  .card:focus h3 {
+  .card:focus h3,
+  .card:focus-within h3 {
     margin: 27px 35px 0 35px;
   }
 }
