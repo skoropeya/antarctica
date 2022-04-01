@@ -35,7 +35,7 @@
     display: none;
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
     background-image: url("../img/back/antarctica-tablet.jpg");
 
     height: 638px;
@@ -86,7 +86,7 @@
 .promo__wrapper {
   padding-left: 95px;
 
-  @include vp-1365 {
+  @include vp-1023 {
     padding-left: 0;
   }
 }

@@ -11,7 +11,7 @@
     margin-right: 33px;
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
     &:not(:last-child) {
       margin-right: 23px;
     }
@@ -44,7 +44,7 @@
     color: darken($color-alice-blue, 30%);
   }
 
-  @include vp-1365 {
+  @include vp-1023 {
     font-size: 14px;
     line-height: 17px;
   }
@@ -78,7 +78,7 @@
 }
 
 .menu--footer {
-  @include vp-1365 {
+  @include vp-1023 {
     .menu__item a {
       font-size: 12px;
       line-height: 15px;
