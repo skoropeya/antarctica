@@ -13,6 +13,7 @@ const openMenu = () => {
   menu.dataset.isOpen = true;
   overlay.dataset.isOverlay = true;
   document.body.style.overflow = 'hidden';
+  overlay.addEventListener('touchstart', onOverlayClick);
 };
 
 const closeMenu = () => {
@@ -20,6 +21,7 @@ const closeMenu = () => {
   menu.dataset.isOpen = false;
   overlay.dataset.isOverlay = false;
   document.body.style.overflow = 'visible';
+  overlay.removeEventListener('touchstart', onOverlayClick);
 };
 
 const checkMenu = () => {
@@ -35,6 +37,12 @@ const onClickMenuToggle = (evt) => {
     closeMenu();
   } else {
     openMenu();
+  }
+};
+
+const onOverlayClick = (evt) => {
+  if (!evt.target.closest('.main-nav')) {
+    closeMenu();
   }
 };
 
