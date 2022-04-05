@@ -26,8 +26,7 @@
   margin: 0;
   display: grid;
   gap: 40px;
-  grid-template-columns: repeat(auto-fill, 360px);
-  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .features__box {
@@ -101,7 +100,6 @@
 
   .features__list {
     gap: 30px;
-    grid-template-columns: repeat(auto-fill, 206px);
   }
 
   .features__box {
@@ -165,7 +163,7 @@
   }
 
   .features__list {
-    grid-template-columns: repeat(auto-fill, 290px);
+    grid-template-columns: auto;
   }
 
   .features__box {

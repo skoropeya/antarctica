@@ -92,11 +92,12 @@
 }
 
 .contacts__box--map {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .contacts__box--address {
-  width: 500px;
+  margin-left: auto;
+  margin-right: 10px;
 }
 
 @include vp-1023 {
@@ -136,10 +137,6 @@
       height: 335px;
     }
   }
-
-  .contacts__box--address {
-    width: 324px;
-  }
 }
 
 @include vp-767 {
@@ -166,8 +163,12 @@
     }
   }
 
+  .contacts__box--map {
+    margin-right: 0;
+  }
+
   .contacts__box--address {
-    width: 290px;
+    margin-right: 0;
     margin-bottom: 40px;
   }
 }

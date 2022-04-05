@@ -33,13 +33,17 @@
 }
 
 .booking__wrapper {
-  padding: 0 60px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
+.booking__box--leading {
+  margin-right: 10px;
+}
+
 .booking__box--form {
+  flex-shrink: 0;
   color: $color-alice-blue;
   background-color: $color-tangaroa;
   width: 403px;
@@ -80,6 +84,7 @@
     }
 
     .booking__box--leading {
+      margin-right: 0;
       margin-bottom: 54px;
     }
 
@@ -126,7 +131,8 @@
     }
 
     .booking__box--form {
-      width: 290px;
+      flex-shrink: 1;
+      width: auto;
       padding: 35px 30px 40px 30px;
 
       p {

@@ -6,6 +6,7 @@
 
 .page-footer__wrapper {
   display: flex;
+  justify-content: flex-start;
 }
 
 .page-footer__box {
@@ -19,6 +20,7 @@
   }
 
   &--social {
+    min-width: 126px;
     margin-left: auto;
     align-self: center;
   }
@@ -71,6 +73,10 @@
 @include vp-1023 {
   .page-footer__box--logo {
     margin-right: 25px;
+  }
+
+  .page-footer__box--social {
+    min-width: 90px;
   }
 
   .page-footer__list {

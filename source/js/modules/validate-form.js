@@ -4,7 +4,7 @@ const checkNumberPhone = () => {
   const validity = inputPhone.validity;
   let message = '';
   if (validity.patternMismatch) {
-    message = 'Введите 11 цифр номера телефона';
+    message = 'Введите только цифры номера телефона';
   }
   inputPhone.setCustomValidity(message);
 };
