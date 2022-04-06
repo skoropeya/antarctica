@@ -140,6 +140,10 @@
     .main-nav__toggle:active::after {
       background-color: lighten($color-tangaroa, 30%);
     }
+
+    .main-nav__list-box {
+      overflow-y: scroll;
+    }
   }
 
   .main-nav__list-box {
