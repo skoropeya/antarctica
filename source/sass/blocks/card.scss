@@ -1,7 +1,18 @@
 .card {
   background-color: $color-tangaroa;
   color: $color-alice-blue;
-  display: grid;
+  width: 100%;
+  padding-top: 148.46%;
+  position: relative;
+
+  .card__box {
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
 
   h3 {
     font-weight: 500;
@@ -10,14 +21,30 @@
     margin-top: auto;
     margin-bottom: 22px;
     margin-left: 30px;
+    margin-right: 20px;
 
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     z-index: 5;
+
+    @include fluidDesktop {
+      font-size: 1.2vw;
+      line-height: 1.5vw;
+      margin-left: 11%;
+      margin-right: 8%;
+    }
   }
 
   dl {
     margin: 0;
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 20px;
+
+    @include fluidDesktop {
+      font-size: 1vw;
+      line-height: 1.3vw;
+    }
   }
 
   dt {
@@ -26,17 +53,19 @@
 
   dd {
     margin-left: 0;
-    margin-bottom: 11px;
     color: $color-quartz;
+
+    &:not(:last-child) {
+      margin-bottom: 5.2%;
+    }
   }
 }
 
 .card__img-box {
   position: relative;
   overflow: hidden;
-  width: 260px;
-  height: 386px;
-
+  max-width: 260px;
+  max-height: 386px;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   z-index: 4;
@@ -55,16 +84,20 @@
   }
 }
 
-.card__box {
+.card__text-box {
   background-color: $color-tangaroa;
-  width: 260px;
-  height: 386px;
+  max-width: 260px;
+  max-height: 386px;
   padding: 70px 25px 35px 25px;
   display: flex;
   flex-direction: column;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   z-index: 3;
+
+  @include fluidDesktop {
+    padding: 23% 8% 10% 8%;
+  }
 }
 
 .card__link-booking {
@@ -141,6 +174,10 @@
     h3 {
       margin: 27px 25px 0 25px;
       height: min-content;
+
+      @include fluidDesktop {
+        margin: 10% 8% 0 8%;
+      }
     }
 
     .card__img-box {
@@ -153,6 +190,10 @@
   h3 {
     margin: 27px 25px 0 25px;
     height: min-content;
+
+    @include fluidDesktop {
+      margin: 10% 8% 0 8%;
+    }
   }
 
   .card__img-box {
@@ -224,7 +265,7 @@
     }
   }
 
-  .card__box {
+  .card__text-box {
     width: 309px;
     padding: 70px 35px 35px 35px;
   }
@@ -314,7 +355,7 @@
     }
   }
 
-  .card__box {
+  .card__text-box {
     width: 270px;
     padding: 70px 25px 35px 25px;
   }
@@ -338,7 +379,7 @@
 
 .card[data-is-touch="true"] {
   h3 {
-    margin: 27px 25px 0 25px;
+    margin: 10.38% 9.615% 0 9.615%;
     height: min-content;
   }
 

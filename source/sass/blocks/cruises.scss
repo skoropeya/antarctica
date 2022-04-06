@@ -18,8 +18,7 @@
   list-style: none;
   display: grid;
   gap: 30px;
-  grid-template-columns: repeat(auto-fill, 260px);
-  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 @include vp-1023 {
@@ -34,7 +33,7 @@
   }
 
   .cruises__list {
-    grid-template-columns: repeat(auto-fill, 309px);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -52,6 +51,6 @@
   .cruises__list {
     padding-left: 10px;
     padding-right: 10px;
-    grid-template-columns: repeat(auto-fill, 270px);
+    grid-template-columns: auto;
   }
 }

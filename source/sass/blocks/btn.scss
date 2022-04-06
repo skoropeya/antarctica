@@ -26,4 +26,13 @@
   &:active {
     background-color: darken($color-alice-blue, 20%);
   }
+
+  &--booking {
+    @include fluidDesktop {
+      padding: 6px;
+      font-weight: 500;
+      font-size: 1vw;
+      line-height: 1.3vw;
+    }
+  }
 }
