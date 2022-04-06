@@ -10,6 +10,7 @@
   color: $color-tangaroa;
   border: none;
   cursor: pointer;
+  user-select: none;
 
   &:disabled {
     opacity: 0.5;
@@ -28,11 +29,23 @@
   }
 
   &--booking {
-    @include fluidDesktop {
+    @include fluid-desktop {
       padding: 6px;
       font-weight: 500;
       font-size: 1vw;
       line-height: 1.3vw;
+    }
+
+    @include fluid-tablet {
+      padding: 15px;
+      font-size: 1.8vw;
+      line-height: 2.3vw;
+    }
+
+    @include fluid-mobile {
+      padding: 18px;
+      font-size: 4.4vw;
+      line-height: 4.7vw;
     }
   }
 }

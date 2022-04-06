@@ -50,6 +50,8 @@
     & + label {
       position: relative;
       padding-left: 23px;
+      cursor: pointer;
+      user-select: none;
     }
 
     & + label::before {
