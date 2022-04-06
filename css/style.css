@@ -599,7 +599,7 @@ button,
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 43, 102, 0.5);
 }
 
 .overlay[data-is-overlay="true"] {
@@ -635,6 +635,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .page-footer__box--logo {
@@ -649,6 +652,7 @@ button,
 }
 
 .page-footer__box--social {
+  min-width: 126px;
   margin-left: auto;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
@@ -839,10 +843,16 @@ button,
   font-size: 16px;
   line-height: 24px;
   margin-top: 0;
-  width: 520px;
+  max-width: 520px;
+}
+
+.description .description__box--text {
+  margin-right: 10px;
 }
 
 .description .description__box--img {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   width: 560px;
   height: 301px;
   position: relative;
@@ -890,10 +900,8 @@ button,
   display: -ms-grid;
   display: grid;
   gap: 40px;
-  grid-template-columns: repeat(auto-fill, 360px);
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .features__box {
@@ -963,17 +971,26 @@ button,
   display: -ms-grid;
   display: grid;
   gap: 30px;
-  grid-template-columns: repeat(auto-fill, 260px);
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .card {
   background-color: #011c40;
   color: #f9fbfd;
+  width: 100%;
+  padding-top: 148.46%;
+  position: relative;
+}
+
+.card .card__box {
   display: -ms-grid;
   display: grid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .card h3 {
@@ -983,6 +1000,7 @@ button,
   margin-top: auto;
   margin-bottom: 22px;
   margin-left: 30px;
+  margin-right: 20px;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   z-index: 5;
@@ -990,6 +1008,9 @@ button,
 
 .card dl {
   margin: 0;
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .card dt {
@@ -998,15 +1019,18 @@ button,
 
 .card dd {
   margin-left: 0;
-  margin-bottom: 11px;
   color: #d8d8d9;
+}
+
+.card dd:not(:last-child) {
+  margin-bottom: 5.2%;
 }
 
 .card__img-box {
   position: relative;
   overflow: hidden;
-  width: 260px;
-  height: 386px;
+  max-width: 260px;
+  max-height: 386px;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   z-index: 4;
@@ -1027,10 +1051,10 @@ button,
   position: absolute;
 }
 
-.card__box {
+.card__text-box {
   background-color: #011c40;
-  width: 260px;
-  height: 386px;
+  max-width: 260px;
+  max-height: 386px;
   padding: 70px 25px 35px 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1107,7 +1131,7 @@ button,
 }
 
 .card[data-is-touch="true"] h3 {
-  margin: 27px 25px 0 25px;
+  margin: 10.38% 9.615% 0 9.615%;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
@@ -1148,19 +1172,23 @@ button,
 }
 
 .booking__wrapper {
-  padding: 0 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
+.booking__box--leading {
+  margin-right: 10px;
+}
+
 .booking__box--form {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   color: #f9fbfd;
   background-color: #011c40;
   width: 403px;
@@ -1368,11 +1396,12 @@ button,
 }
 
 .contacts__box--map {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .contacts__box--address {
-  width: 500px;
+  margin-left: auto;
+  margin-right: 10px;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -1443,13 +1472,17 @@ button,
   }
 }
 
-@media (max-width: 1365px) {
+@media (max-width: 1023px) {
   .container {
     padding: 0 45px;
   }
 
   .page-footer__box--logo {
     margin-right: 25px;
+  }
+
+  .page-footer__box--social {
+    min-width: 90px;
   }
 
   .page-footer__list {
@@ -1556,7 +1589,6 @@ button,
 
   .features__list {
     gap: 30px;
-    grid-template-columns: repeat(auto-fill, 206px);
   }
 
   .features__box {
@@ -1605,7 +1637,8 @@ button,
   }
 
   .cruises__list {
-    grid-template-columns: repeat(auto-fill, 309px);
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .card h3 {
@@ -1653,7 +1686,7 @@ button,
     left: -15px;
   }
 
-  .card__box {
+  .card__text-box {
     width: 309px;
     padding: 70px 35px 35px 35px;
   }
@@ -1694,6 +1727,7 @@ button,
   }
 
   .booking .booking__box--leading {
+    margin-right: 0;
     margin-bottom: 54px;
   }
 
@@ -1737,13 +1771,9 @@ button,
     width: 324px;
     height: 335px;
   }
-
-  .contacts__box--address {
-    width: 324px;
-  }
 }
 
-@media (max-width: 1365px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1365px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1365px) and (min-resolution: 144dpi), (max-width: 1365px) and (min-resolution: 1.5dppx) {
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .promo {
     background-image: url("../img/back/antarctica-desktop@2x.jpg");
   }
@@ -1909,6 +1939,10 @@ button,
     background-color: #035ed7;
   }
 
+  .main-nav[data-is-open="true"] .main-nav__list-box {
+    overflow-y: scroll;
+  }
+
   .main-nav__list-box[data-is-open="false"] {
     display: none;
   }
@@ -2023,7 +2057,8 @@ button,
   }
 
   .features__list {
-    grid-template-columns: repeat(auto-fill, 290px);
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
   }
 
   .features__box {
@@ -2065,7 +2100,8 @@ button,
   .cruises__list {
     padding-left: 10px;
     padding-right: 10px;
-    grid-template-columns: repeat(auto-fill, 270px);
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
   }
 
   .card h3 {
@@ -2117,7 +2153,7 @@ button,
     left: -15px;
   }
 
-  .card__box {
+  .card__text-box {
     width: 270px;
     padding: 70px 25px 35px 25px;
   }
@@ -2161,7 +2197,9 @@ button,
   }
 
   .booking .booking__box--form {
-    width: 290px;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    width: auto;
     padding: 35px 30px 40px 30px;
   }
 
@@ -2214,8 +2252,12 @@ button,
     height: 316px;
   }
 
+  .contacts__box--map {
+    margin-right: 0;
+  }
+
   .contacts__box--address {
-    width: 290px;
+    margin-right: 0;
     margin-bottom: 40px;
   }
 }
@@ -2291,7 +2333,44 @@ button,
   }
 }
 
-@media (max-width: 1365px) and (hover: hover), screen and (max-width: 1365px) and (min-width: 0\0) {
+@media (min-width: 1024px) and (max-width: 1365px) {
+  .btn--booking {
+    padding: 6px;
+    font-weight: 500;
+    font-size: 1vw;
+    line-height: 1.3vw;
+  }
+
+  .card h3 {
+    font-size: 1.2vw;
+    line-height: 1.5vw;
+    margin-left: 11%;
+    margin-right: 8%;
+  }
+
+  .card dl {
+    font-size: 1vw;
+    line-height: 1.3vw;
+  }
+
+  .card__text-box {
+    padding: 23% 8% 10% 8%;
+  }
+
+  .card:active h3 {
+    margin: 10% 8% 0 8%;
+  }
+}
+
+@media (hover: hover) and (min-width: 1024px) and (max-width: 1365px), screen and (min-width: 0\0) and (min-width: 1024px) and (max-width: 1365px) {
+  .card:hover h3,
+  .card:focus h3,
+  .card:focus-within h3 {
+    margin: 10% 8% 0 8%;
+  }
+}
+
+@media (max-width: 1023px) and (hover: hover), screen and (max-width: 1023px) and (min-width: 0\0) {
   .card:hover h3,
   .card:focus h3,
   .card:focus-within h3 {
