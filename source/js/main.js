@@ -4,6 +4,7 @@ import {onClickMenuItem} from './modules/slow-scroll';
 import {setTouchOnCard} from './modules/show-card';
 import {setViewportWidth} from './utils/vw-fix';
 import {setValidateForm} from './modules/validate-form';
+import {setImageWidth} from './utils/image-width';
 
 const menuToggle = document.querySelector('.main-nav__toggle');
 const menuHeader = document.querySelector('.menu--header');
@@ -15,6 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
   iosVhFix();
   setViewportWidth();
+  setImageWidth();
   // Modules
   // ---------------------------------
   useJs();
