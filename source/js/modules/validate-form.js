@@ -1,4 +1,5 @@
-const inputPhone = document.querySelector('.form input[type="tel"]');
+const form = document.querySelector('.booking form');
+const inputPhone = form.querySelector('input[type="tel"]');
 
 const checkNumberPhone = () => {
   const validity = inputPhone.validity;
