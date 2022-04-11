@@ -2,6 +2,7 @@ const header = document.querySelector('.page-header');
 const mainNav = document.querySelector('.main-nav');
 const menu = document.querySelector('.main-nav__list-box');
 const overlay = document.querySelector('.overlay');
+const main = document.querySelector('.page-main');
 
 const useJs = () => {
   header.dataset.isJs = true;
@@ -13,6 +14,7 @@ const openMenu = () => {
   menu.dataset.isOpen = true;
   overlay.dataset.isOverlay = true;
   document.body.style.overflow = 'hidden';
+  main.dataset.isText = false;
   overlay.addEventListener('touchstart', onOverlayClick);
 };
 
@@ -21,6 +23,7 @@ const closeMenu = () => {
   menu.dataset.isOpen = false;
   overlay.dataset.isOverlay = false;
   document.body.style.overflow = 'visible';
+  main.dataset.isText = true;
   overlay.removeEventListener('touchstart', onOverlayClick);
 };
 

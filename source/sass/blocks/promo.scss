@@ -7,7 +7,7 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   height: 650px;
   margin-bottom: 120px;
 
@@ -85,8 +85,13 @@
 
 .promo__wrapper {
   padding-left: 95px;
+  padding-top: 270px;
 
   @include vp-1023 {
     padding-left: 0;
+  }
+
+  @include vp-767 {
+    padding-top: 175px;
   }
 }

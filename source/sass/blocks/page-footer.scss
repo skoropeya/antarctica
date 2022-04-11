@@ -22,7 +22,8 @@
   &--social {
     min-width: 126px;
     margin-left: auto;
-    align-self: center;
+    margin-top: 8px;
+    align-self: flex-start;
   }
 }
 
@@ -77,6 +78,7 @@
 
   .page-footer__box--social {
     min-width: 90px;
+    margin-top: 0;
   }
 
   .page-footer__list {
