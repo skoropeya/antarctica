@@ -1,58 +1,24 @@
-const images = document.querySelectorAll('.card img');
-const card = document.querySelector('.card');
-
-const CARD_WIDTH_DESKTOP = 260;
-const CARD_WIDTH_TABLET = 309;
-const CARD_WIDTH_MOBILE = 270;
-
 const MAX_WIDTH_DESKTOP = 1366;
 const WIDTH_DESKTOP = 1024;
 const WIDTH_TABLET = 768;
 const WIDTH_MOBILE = 320;
 
-const getOriginalWidths = (elems) => {
-  const widths = [];
-  elems.forEach((elem) => {
-    widths.push(elem.getAttribute('width'));
-  });
-  return widths;
+const getOriginalWidth = (elem) => {
+  const originalWidth = elem.getAttribute('width');
+  return originalWidth;
 };
 
 const checkViewport = () => {
   const vw = window.innerWidth;
-  let baseCardWidth = 0;
+  let screenType = '';
   if (vw >= WIDTH_DESKTOP && vw < MAX_WIDTH_DESKTOP) {
-    baseCardWidth = CARD_WIDTH_DESKTOP;
+    screenType = 'desktop';
   } else if (vw > WIDTH_TABLET && vw < WIDTH_DESKTOP) {
-    baseCardWidth = CARD_WIDTH_TABLET;
+    screenType = 'tablet';
   } else if (vw > WIDTH_MOBILE && vw < WIDTH_TABLET) {
-    baseCardWidth = CARD_WIDTH_MOBILE;
+    screenType = 'mobile';
   }
-  return baseCardWidth;
+  return screenType;
 };
 
-const setImageWidth = () => {
-  let baseCardWidth = checkViewport();
-  let cardWidth = card.clientWidth;
-  const originalWidths = getOriginalWidths(images);
-
-  if (baseCardWidth) {
-    images.forEach(function (image, i) {
-      const newWidth = originalWidths[i] / baseCardWidth * cardWidth;
-      image.style.setProperty('width', `${newWidth}px`);
-    });
-  }
-
-  window.addEventListener('resize', function () {
-    baseCardWidth = checkViewport();
-    cardWidth = card.clientWidth;
-    if (baseCardWidth) {
-      images.forEach(function (image, i) {
-        const newWidth = originalWidths[i] / baseCardWidth * cardWidth;
-        image.style.setProperty('width', `${newWidth}px`);
-      });
-    }
-  });
-};
-
-export {setImageWidth};
+export {getOriginalWidth, checkViewport};
