@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   setViewportWidth();
   setImageWidth();
-  // setImgDescriptionWidth();
+  setImgDescriptionWidth();
   // Modules
   // ---------------------------------
   useJs();
