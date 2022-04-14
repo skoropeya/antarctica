@@ -1,4 +1,4 @@
-import {getOriginalWidth, checkViewport} from '../utils/image-width';
+import {getOriginalSize, checkViewport} from '../utils/image-width';
 
 const image = document.querySelector('.description img');
 const boxImage = document.querySelector('.description__img-wrapper');
@@ -6,7 +6,7 @@ const boxImage = document.querySelector('.description__img-wrapper');
 const SCREEN_TYPE = 'desktop';
 const BASE_WIDTH = 560;
 
-const originalWidth = getOriginalWidth(image);
+const originalWidth = getOriginalSize(image, 'width');
 
 const setImgDescriptionWidth = () => {
   let viewportWidth = checkViewport();

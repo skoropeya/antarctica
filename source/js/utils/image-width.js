@@ -3,7 +3,7 @@ const WIDTH_DESKTOP = 1024;
 const WIDTH_TABLET = 768;
 const WIDTH_MOBILE = 320;
 
-const getOriginalWidth = (elem) => elem.getAttribute('width');
+const getOriginalSize = (elem, attr) => elem.getAttribute(attr);
 
 const checkViewport = () => {
   const vw = window.innerWidth;
@@ -18,4 +18,4 @@ const checkViewport = () => {
   return screenType;
 };
 
-export {getOriginalWidth, checkViewport};
+export {getOriginalSize, checkViewport};
