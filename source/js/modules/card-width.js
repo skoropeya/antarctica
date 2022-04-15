@@ -1,59 +1,64 @@
-import {getOriginalSize, checkViewport} from '../utils/image-width';
+import {getOriginalSize, checkScreenType} from '../utils/image-width';
 
 const images = document.querySelectorAll('.card img');
 const cards = document.querySelectorAll('.card');
 
-const CARD_PROPORTIONS = {
-  '': 0,
-  'desktop': {width: 260, height: 386},
-  'tablet': {width: 309, height: 386},
-  'mobile': {width: 270, height: 386},
-};
+const BASE_HEIGHT = 386;
 
 const originalImages = [];
 images.forEach(function (image) {
-  const originalWidth = getOriginalSize(image, 'width');
-  const originalHeight = getOriginalSize(image, 'height');
-  originalImages.push({item: image, width: originalWidth, height: originalHeight});
+  originalImages.push({
+    img: image,
+    originalHeight: getOriginalSize(image, 'height'),
+    originalWidth: getOriginalSize(image, 'width'),
+  });
 });
 
-const setImageWidth = () => {
+const setSize = (elem, valueWidth, valueHeight) => {
+  elem.style.setProperty('width', valueWidth);
+  elem.style.setProperty('height', valueHeight);
+};
 
-  const cardProportions = [];
-  cards.forEach(function (card) {
-    const cardWidth = card.clientWidth;
-    const cardHeight = card.clientHeight;
-    cardProportions.push({item: card, width: cardWidth, height: cardHeight});
-  });
-
-  let baseCardProportions = CARD_PROPORTIONS[checkViewport()];
-
-  if (baseCardProportions) {
+const calculateSize = (viewportWidth) => {
+  if (viewportWidth) {
     images.forEach(function (image, i) {
+      const cardHeight = cards[i].clientHeight;
+      const cardWidth = cards[i].clientWidth;
+      image.style.setProperty('left', '0');
 
+      if (cardHeight > BASE_HEIGHT) {
+        const currentHeight = +window.getComputedStyle(image).height.slice(0, -2);
+        const newHeight = (cardHeight / currentHeight) * currentHeight;
+        setSize(image, 'auto', `${newHeight}px`);
+      }
+
+      const currentWidth = +window.getComputedStyle(image).width.slice(0, -2);
+
+      if (cardWidth > currentWidth) {
+        const newWidth = (cardWidth / currentWidth) * currentWidth;
+        setSize(image, `${newWidth}px`, 'auto');
+      }
+    });
+  } else {
+    images.forEach(function (image, i) {
+      const cardHeight = cards[i].clientHeight;
+      if (cardHeight > BASE_HEIGHT) {
+        const currentHeight = +window.getComputedStyle(image).height.slice(0, -2);
+        const newHeight = (cardHeight / currentHeight) * currentHeight;
+        setSize(image, 'auto', `${newHeight}px`);
+      }
     });
   }
+};
 
+const setImageWidth = () => {
+  let viewportWidth = checkScreenType();
+  calculateSize(viewportWidth);
 
-  // if (baseCardWidth) {
-  //   images.forEach(function (image, i) {
-  //     const newWidth = originalWidths[i] / baseCardWidth * cardWidth;
-  //     image.style.setProperty('width', `${newWidth}px`);
-  //     image.style.setProperty('height', 'auto');
-  //   });
-  // }
-
-  // window.addEventListener('resize', function () {
-  //   baseCardWidth = CARD_WIDTHS[checkViewport()];
-  //   cardWidth = card.clientWidth;
-  //   if (baseCardWidth) {
-  //     images.forEach(function (image, i) {
-  //       const newWidth = originalWidths[i] / baseCardWidth * cardWidth;
-  //       image.style.setProperty('width', `${newWidth}px`);
-  //       image.style.setProperty('height', 'auto');
-  //     });
-  //   }
-  // });
+  window.addEventListener('resize', function () {
+    viewportWidth = checkScreenType();
+    calculateSize(viewportWidth);
+  });
 };
 
 export {setImageWidth};

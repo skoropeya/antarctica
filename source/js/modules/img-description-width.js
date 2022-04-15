@@ -1,4 +1,4 @@
-import {getOriginalSize, checkViewport} from '../utils/image-width';
+import {getOriginalSize, checkScreenType} from '../utils/image-width';
 
 const image = document.querySelector('.description img');
 const boxImage = document.querySelector('.description__img-wrapper');
@@ -9,7 +9,7 @@ const BASE_WIDTH = 560;
 const originalWidth = getOriginalSize(image, 'width');
 
 const setImgDescriptionWidth = () => {
-  let viewportWidth = checkViewport();
+  let viewportWidth = checkScreenType();
 
   if (viewportWidth === SCREEN_TYPE) {
     let boxWidth = boxImage.clientWidth;
@@ -18,7 +18,7 @@ const setImgDescriptionWidth = () => {
   }
 
   window.addEventListener('resize', function () {
-    viewportWidth = checkViewport();
+    viewportWidth = checkScreenType();
 
     if (viewportWidth === SCREEN_TYPE) {
       let boxWidth = boxImage.clientWidth;
