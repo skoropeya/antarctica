@@ -1020,8 +1020,18 @@ button,
   background-color: #011c40;
   color: #f9fbfd;
   width: 100%;
+  padding-top: 148.46%;
+  position: relative;
+}
+
+.card .card__box {
   display: -ms-grid;
   display: grid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .card h3 {
@@ -1029,7 +1039,7 @@ button,
   font-size: 18px;
   line-height: 27px;
   margin-top: auto;
-  margin-bottom: 23px;
+  margin-bottom: 22px;
   margin-left: 30px;
   margin-right: 20px;
   grid-column: 1 / -1;
@@ -1054,7 +1064,15 @@ button,
 }
 
 .card dd:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 5.2%;
+}
+
+.card__wrapper-text {
+  display: -ms-grid;
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  overflow-y: scroll;
 }
 
 .card__img-box {
@@ -1084,7 +1102,8 @@ button,
 .card__text-box {
   background-color: #011c40;
   max-width: 260px;
-  padding: 70px 25px 34px 25px;
+  min-height: 259px;
+  padding: 70px 25px 35px 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1100,8 +1119,6 @@ button,
 .card__link-booking {
   margin: 0;
   margin-top: auto;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
 }
 
 .card--astoriya img {
@@ -1166,6 +1183,10 @@ button,
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
+}
+
+.card[data-is-touch="true"] .card__text-box {
+  min-height: auto;
 }
 
 .card[data-is-touch="true"] .card__img-box {
@@ -1483,6 +1504,12 @@ button,
     height: min-content;
   }
 
+  .card:hover .card__text-box,
+  .card:focus .card__text-box,
+  .card:focus-within .card__text-box {
+    min-height: auto;
+  }
+
   .card:hover .card__img-box,
   .card:focus .card__img-box,
   .card:focus-within .card__img-box {
@@ -1702,6 +1729,10 @@ button,
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .card {
+    padding-top: 124.92%;
+  }
+
   .card h3 {
     margin-bottom: 28px;
     margin-left: 35px;
@@ -1717,7 +1748,7 @@ button,
     max-width: none;
     min-width: 309px;
     min-height: 386px;
-    padding: 70px 35px 34px 35px;
+    padding: 70px 35px 35px 35px;
   }
 
   .card--astoriya img {
@@ -1760,8 +1791,16 @@ button,
     margin: 27px 35px 0 35px;
   }
 
+  .card:active .card__text-box {
+    min-height: auto;
+  }
+
   .card[data-is-touch="true"] h3 {
     margin: 27px 35px 0 35px;
+  }
+
+  .card[data-is-touch="true"] .card__text-box {
+    min-height: auto;
   }
 
   .booking {
@@ -2183,6 +2222,10 @@ button,
     grid-template-columns: auto;
   }
 
+  .card {
+    padding-top: 142.96%;
+  }
+
   .card h3 {
     margin-bottom: 19px;
     margin-left: 25px;
@@ -2501,6 +2544,12 @@ button,
   .card:focus h3,
   .card:focus-within h3 {
     margin: 27px 35px 0 35px;
+  }
+
+  .card:hover .card__text-box,
+  .card:focus .card__text-box,
+  .card:focus-within .card__text-box {
+    min-height: auto;
   }
 }
 
