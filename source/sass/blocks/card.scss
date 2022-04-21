@@ -2,14 +2,24 @@
   background-color: $color-tangaroa;
   color: $color-alice-blue;
   width: 100%;
-  display: grid;
+  padding-top: 148.46%;
+  position: relative;
+
+  .card__box {
+    display: grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
 
   h3 {
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
     margin-top: auto;
-    margin-bottom: 23px;
+    margin-bottom: 22px;
     margin-left: 30px;
     margin-right: 20px;
 
@@ -70,7 +80,7 @@
     color: $color-quartz;
 
     &:not(:last-child) {
-      margin-bottom: 12px;
+      margin-bottom: 5.2%;
     }
   }
 }
@@ -79,6 +89,7 @@
   position: relative;
   overflow: hidden;
   max-width: 260px;
+  max-height: 386px;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   z-index: 4;
@@ -100,7 +111,8 @@
 .card__text-box {
   background-color: $color-tangaroa;
   max-width: 260px;
-  padding: 70px 25px 34px 25px;
+  max-height: 386px;
+  padding: 70px 25px 35px 25px;
   display: flex;
   flex-direction: column;
   grid-column: 1 / -1;
@@ -115,7 +127,6 @@
 .card__link-booking {
   margin: 0;
   margin-top: auto;
-  flex-shrink: 0;
 }
 
 .card--astoriya {
@@ -216,6 +227,8 @@
 
 @include vp-1023 {
   .card {
+    padding-top: 124.92%;
+
     h3 {
       margin-bottom: 28px;
       margin-left: 35px;
@@ -224,15 +237,17 @@
 
   .card__img-box {
     max-width: none;
+    max-height: none;
     min-width: 309px;
     min-height: 386px;
   }
 
   .card__text-box {
     max-width: none;
+    max-height: none;
     min-width: 309px;
     min-height: 386px;
-    padding: 70px 35px 34px 35px;
+    padding: 70px 35px 35px 35px;
   }
 
   .card--astoriya {
@@ -306,6 +321,8 @@
 
 @include vp-767 {
   .card {
+    padding-top: 142.96%;
+
     h3 {
       margin-bottom: 19px;
       margin-left: 25px;

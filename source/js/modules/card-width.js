@@ -1,15 +1,12 @@
-import {getOriginalSize, checkScreenType} from '../utils/image-width';
+import {getOriginalSize, checkScreenType, getCardWidth} from '../utils/image-width';
 
 const images = document.querySelectorAll('.card img');
-const cards = document.querySelectorAll('.card');
-
-const BASE_HEIGHT = 386;
+const card = document.querySelector('.card');
 
 const originalImages = [];
 images.forEach(function (image) {
   originalImages.push({
     img: image,
-    originalHeight: getOriginalSize(image, 'height'),
     originalWidth: getOriginalSize(image, 'width'),
   });
 });
@@ -19,45 +16,30 @@ const setSize = (elem, valueWidth, valueHeight) => {
   elem.style.setProperty('height', valueHeight);
 };
 
-const calculateSize = (viewportWidth) => {
-  if (viewportWidth) {
+const calculateSize = () => {
+  let baseCardWidth = getCardWidth();
+  let cardWidth = card.clientWidth;
+
+  if (baseCardWidth) {
     images.forEach(function (image, i) {
-      const cardHeight = cards[i].clientHeight;
-      const cardWidth = cards[i].clientWidth;
-      image.style.setProperty('left', '0');
-
-      if (cardHeight > BASE_HEIGHT) {
-        const currentHeight = +window.getComputedStyle(image).height.slice(0, -2);
-        const newHeight = (cardHeight / currentHeight) * currentHeight;
-        setSize(image, 'auto', `${newHeight}px`);
-      }
-
-      const currentWidth = +window.getComputedStyle(image).width.slice(0, -2);
-
-      if (cardWidth > currentWidth) {
-        const newWidth = (cardWidth / currentWidth) * currentWidth;
-        setSize(image, `${newWidth}px`, 'auto');
-      }
-    });
-  } else {
-    images.forEach(function (image, i) {
-      const cardHeight = cards[i].clientHeight;
-      if (cardHeight > BASE_HEIGHT) {
-        const currentHeight = +window.getComputedStyle(image).height.slice(0, -2);
-        const newHeight = (cardHeight / currentHeight) * currentHeight;
-        setSize(image, 'auto', `${newHeight}px`);
-      }
+      const originalWidth = originalImages[i].originalWidth;
+      const newWidth = originalWidth / baseCardWidth * cardWidth;
+      setSize(image, `${newWidth}px`, 'auto');
     });
   }
 };
 
 const setImageWidth = () => {
   let viewportWidth = checkScreenType();
-  calculateSize(viewportWidth);
+  if (viewportWidth) {
+    calculateSize();
+  }
 
   window.addEventListener('resize', function () {
     viewportWidth = checkScreenType();
-    calculateSize(viewportWidth);
+    if (viewportWidth) {
+      calculateSize();
+    }
   });
 };
 
