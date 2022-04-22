@@ -879,9 +879,8 @@ button,
   width: 48.28%;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .description .description__box--img::before {
